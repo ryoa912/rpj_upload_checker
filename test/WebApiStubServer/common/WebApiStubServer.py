@@ -4,16 +4,10 @@ import logging
 import time
 import json
 
-POWER = 0
-FIRM = 0
-
 # Dummy Web serer class.
 class MyHTTPRequestHandler(BaseHTTPRequestHandler):
 
-    def do_GET(self):
-        global POWER
-        global FIRM
-        
+    def do_GET(self):        
         #--- logging ---#
         logging.info('[Request method] GET')
         logging.info('[Request url]' + str(self.path))
@@ -31,22 +25,13 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
           resfilename = 'get_response_projection.json'
           self.send_header('Content-type', 'application/json')
         elif self.path.startswith("/property"):
-          if FIRM==0:
-            logging.info('[Response for GET /property] 200 OK firm:0\n--------------------\n\n\n--------------------')
-            resfilename = 'get_response_property.json'
-          else:
-            logging.info('[Response for GET /property] 200 OK firm:1\n--------------------\n\n\n--------------------')
-            resfilename = 'get_response_property_1.json'
+          logging.info('[Response for GET /property] 200 OK\n--------------------\n\n\n--------------------')
+          resfilename = 'get_response_property_1.json'
           self.send_header('Content-type', 'application/json')
         elif self.path.startswith("/state"):
-          if POWER==0:
-            logging.info('[Response for GET /state] 200 OK power:standby\n--------------------\n\n\n--------------------')
-            resfilename = 'get_response_state_standby.json'
-            self.send_header('Content-type', 'text/html')
-          else:
-            logging.info('[Response for GET /state] 200 OK power:on\n--------------------\n\n\n--------------------')
-            resfilename = 'get_response_state_on.json'
-            self.send_header('Content-type', 'application/json')
+          logging.info('[Response for GET /state] 200 OK\n--------------------\n\n\n--------------------')
+          resfilename = 'get_response_state_on.json'
+          self.send_header('Content-type', 'application/json')
         elif self.path.startswith("/debug_log"):
           logging.info('[Response for GET /debug_log] 200 OK\n--------------------\n\n\n--------------------')
           resfilename = 'log.tar'
@@ -101,8 +86,6 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         
     def do_PUT(self):
-        global POWER
-        global FIRM
         
         #--- logging ---#
         logging.info('[Request method] PUT')
@@ -113,16 +96,6 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
         if content_len<=1024:
           logging.info('[Request body]\n' + put_body)
         
-        if self.path.startswith("/state"):
-          jsonData = json.loads(put_body)
-          if jsonData["power_mode"].startswith("standby"):
-            logging.info('[Change Status] Power mode : standby')
-            POWER = 0
-          else:
-            logging.info('[Change Status] Power mode : on')
-            POWER = 1
-        elif self.path.startswith("/firmware"):
-          FIRM = 1
         ### URL Common ###
         logging.info('[Response for PUT common] 200 OK\n--------------------\n\n\n--------------------')
         self.send_response(200)
