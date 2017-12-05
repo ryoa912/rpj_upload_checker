@@ -1,0 +1,17 @@
+{
+    "state" : "projection",
+    "exclusive" : "on",
+    "type" : "playlist",
+    "path" : "/files/usb1/xxxx/xxxx/playlist.json",
+    "is_streaming" : false,
+    "content" :
+    {
+        "start_time" : "1566568655.0",
+        "file_type" : "video",
+        "file_path" : "/files/usb1/xxxx/xxxx/xxxxx.mpeg",
+        "duration" : 
+        {
+            "second" : "120"
+        }
+    }
+}

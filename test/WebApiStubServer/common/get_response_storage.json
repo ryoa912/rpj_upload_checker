@@ -1,0 +1,16 @@
+{
+"is_dir": true,
+"path" : "/files/usb1/dirA/sample",
+"items": 
+[
+    {
+"is_dir": true,
+"path" : "/files/usb1/dirA/sample/dirB"
+    },
+{
+"is_dir": false,
+"bytes":"987456123",
+"path" : "/files/usb1/dirA/sample/1.jpg"
+    }
+]
+}

@@ -1,0 +1,43 @@
+{
+  "power_mode": "on",
+  "input_mode": "NETWORK1",
+  "av_mute": "off",
+  "error_state": [
+    "no_error"
+  ],
+  "lamp": [
+    {
+      "lamp_total_time": 6,
+      "lamp_state": "on"
+    }
+  ],
+  "wired_lan": {
+    "status": "link-up",
+    "transmission_speed": "1000base-t_full",
+    "mac_address": "00:26:73:ad:e3:b1",
+    "ip_address": "10.63.59.228",
+    "subnet_mask": "255.255.255.0",
+    "default_gateway": "0.0.0.0"
+  },
+  "wireless_lan": {
+    "status": "link-down",
+    "radio_intensity": 0,
+    "mac_address": "fc:db:b3:8b:d1:76",
+    "ap_bssid": "00:00:00:00:00:00",
+    "communication_mode": "undefined",
+    "transmission_speed": 0,
+    "channel": 0,
+    "ssid": "",
+    "security_mode": "undefined",
+    "encrypt_mode": "undefined",
+    "ip_address": "0.0.0.0",
+    "subnet_mask": "0.0.0.0",
+    "default_gateway": "0.0.0.0"
+  },
+  "ntp_client": {
+    "status": "on",
+    "server" : "192.168.0.200",
+    "current_time": "1466083547.510573",
+    "synchronization" : true
+  }
+}
