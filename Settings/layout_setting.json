@@ -1,0 +1,150 @@
+{
+  "ProjectionScreen": {
+    "HorizontalLayoutList": [
+      {
+        "FloorId": 9,
+        "WindowIdList": [
+          1,
+          2
+        ]
+      },
+      {
+        "FloorId": 8,
+        "WindowIdList": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  "Building": {
+    "FloorList": [
+      {
+        "Id": 9,
+        "PowerControllerList": [
+          {
+            "IpAddress": "127.0.0.1"
+          },
+          {
+            "IpAddress": "127.0.0.1"
+          }
+        ],
+        "IlluminationsList": [
+          {
+            "PowerControllerIpAddress": "127.0.0.1",
+            "PowerControllerPort": "ePort1"
+          }
+        ],
+        "WindowList": [
+          {
+            "ScreenHeight": 3000,
+            "ScreenWidth": 1500,
+            "ScreenBottomMargin": 800,
+            "ScreenRightMargin": 200,
+            "ShieldingSheet": {
+              "PowerControllerIpAddress": "127.0.0.1",
+              "PowerControllerPort": "ePort2"
+            },
+            "ProjectorList": [
+              {
+                "IpAddress": "127.0.0.1",
+                "PowerControllerIpAddress": "127.0.0.1",
+                "PowerControllerPort": "ePort1"
+              },
+              {
+                "IpAddress": "127.0.0.1",
+                "PowerControllerIpAddress": "127.0.0.1",
+                "PowerControllerPort": "ePort2"
+              }
+            ]
+          },
+          {
+            "ScreenHeight": 3000,
+            "ScreenWidth": 1500,
+            "ScreenBottomMargin": 800,
+            "ScreenRightMargin": 0,
+            "ShieldingSheet": {
+              "PowerControllerIpAddress": "127.0.0.1",
+              "PowerControllerPort": "ePort3"
+            },
+            "ProjectorList": [
+              {
+                "IpAddress": "127.0.0.1",
+                "PowerControllerIpAddress": "127.0.0.1",
+                "PowerControllerPort": "ePort3"
+              },
+              {
+                "IpAddress": "127.0.0.1",
+                "PowerControllerIpAddress": "127.0.0.1",
+                "PowerControllerPort": "ePort4"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Id": 8,
+        "PowerControllerList": [
+          {
+            "IpAddress": "127.0.0.1"
+          },
+          {
+            "IpAddress": "127.0.0.1"
+          }
+        ],
+        "IlluminationsList": [
+          {
+            "PowerControllerIpAddress": "127.0.0.1",
+            "PowerControllerPort": "ePort1"
+          }
+        ],
+        "WindowList": [
+          {
+            "ScreenHeight": 3000,
+            "ScreenWidth": 1500,
+            "ScreenBottomMargin": 0,
+            "ScreenRightMargin": 200,
+            "ShieldingSheet": {
+              "PowerControllerIpAddress": "127.0.0.1",
+              "PowerControllerPort": "ePort2"
+            },
+            "ProjectorList": [
+              {
+                "IpAddress": "127.0.0.1",
+                "PowerControllerIpAddress": "127.0.0.1",
+                "PowerControllerPort": "ePort1"
+              },
+              {
+                "IpAddress": "127.0.0.1",
+                "PowerControllerIpAddress": "127.0.0.1",
+                "PowerControllerPort": "ePort2"
+              }
+            ]
+          },
+          {
+            "ScreenHeight": 3000,
+            "ScreenWidth": 1500,
+            "ScreenBottomMargin": 0,
+            "ScreenRightMargin": 0,
+            "ShieldingSheet": {
+              "PowerControllerIpAddress": "127.0.0.1",
+              "PowerControllerPort": "ePort3"
+            },
+            "ProjectorList": [
+              {
+                "IpAddress": "127.0.0.1",
+                "PowerControllerIpAddress": "127.0.0.1",
+                "PowerControllerPort": "ePort3"
+              },
+              {
+                "IpAddress": "127.0.0.1",
+                "PowerControllerIpAddress": "127.0.0.1",
+                "PowerControllerPort": "ePort4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
