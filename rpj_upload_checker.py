@@ -7,8 +7,9 @@ server_url      = 'localhost:80'
 storage_api_url = '/service/storage/files/usb1'
 directory_name  = 'rpj_upload_checker'
 file_name       = 'image01.jpg'
+local_file_path = 'contents/image01.jpg'
 
-f = open('contents/image01.jpg')
+f = open(local_file_path)
 str = f.read()
 print str
 
