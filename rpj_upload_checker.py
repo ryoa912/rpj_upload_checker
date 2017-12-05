@@ -3,17 +3,24 @@
 import urllib
 import httplib
 
+server_url      = 'localhost:80'
 storage_api_url = '/service/storage/files/usb1'
 directory_name  = 'rpj_upload_checker'
 file_name       = 'image01.jpg'
 
-connection = httplib.HTTPConnection('localhost:80')
-params = urllib.urlencode({'spam': 1, 'eggs': 2, 'bacon': 0})
-headers = {'Content-type': 'application/x-www-form-urlencoded', 'Accept': 'text/plain'}
-connection.request('PUT', storage_api_url+'/'+directory_name+'/'+file_name, params, headers)
+f = open('contents/image01.jpg')
+str = f.read()
+print str
+
+connection = httplib.HTTPConnection(server_url)
+
+headers = { 'Content-type':'application/octet-stream', 'Overwrite': 'T'}
+connection.request('PUT', storage_api_url+'/'+directory_name+'/'+file_name, str, headers)
 response = connection.getresponse()
 data = response.read()
 print response.status, response.reason
 print data
 
 print '-'*50
+
+f.close()
